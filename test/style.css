@@ -1,0 +1,205 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: glitch;
+  src: url(./fonts/Hacked-KerX.ttf);
+}
+@font-face {
+  font-family: cyber;
+  src: url(./fonts/CyberwarRegular-7BX0E.ttf);
+}
+#todolist-div {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+#todolist-div #header {
+  flex: 0 1 auto;
+  background-color: #10192c;
+}
+#todolist-div #header #app-name-h1 {
+  font-family: cyber, sans-serif;
+  color: white;
+  text-shadow: 0 0 1rem blue;
+  font-size: 3rem;
+}
+#todolist-div #main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row;
+}
+#todolist-div #main #projects-nav {
+  background-color: #060621;
+  flex: 1 0 auto;
+  min-width: 300px;
+}
+#todolist-div #main #projects-nav .product-arrow-icon {
+  color: #c0c0c0;
+}
+#todolist-div #main #projects-nav #workspace-name-div {
+  display: flex;
+  align-items: center;
+  background-color: #10192c;
+}
+#todolist-div #main #projects-nav #workspace-name-div #workspace-name-h2 {
+  color: white;
+}
+#todolist-div #main #projects-nav .projects-div .project-button {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  padding: 3px 0 3px 24px;
+  background: transparent;
+  border: 1px transparent;
+}
+#todolist-div #main #projects-nav .projects-div .project-button .project-name-h4 {
+  text-align: left;
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  color: #73c991;
+}
+#todolist-div #main #projects-nav .projects-div .project-button:hover {
+  cursor: pointer;
+  background-color: #061940;
+}
+#todolist-div #main #project-content-div {
+  flex: 3 0 auto;
+  background-color: #000c18;
+}
+#todolist-div #footer {
+  flex: 0 0 20px;
+  min-width: 40px;
+  background-color: #10192c;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,100 @@
+@use "reset";
+
+@font-face {
+  font-family: glitch;
+  src: url(./fonts/Hacked-KerX.ttf);
+}
+
+@font-face {
+  font-family: cyber;
+  src: url(./fonts/CyberwarRegular-7BX0E.ttf);
+}
+
+@mixin cyber-font($size: 2rem, $color: blue) {
+  font-family: $cyber-font;
+  color: white;
+  text-shadow: 0 0 1rem $color;
+  font-size: $size;
+}
+
+$glitch-font: glitch, sans-serif;
+$cyber-font: cyber, sans-serif;
+
+$projects-nav-bg-color: #060621;
+$header-bg-color: #10192c;
+$main-bg-color: #000c18;
+$footer-bg-color: #10192c;
+$workspace-name-bg-color: #10192c;
+
+$done-project-font-color: #73c991;
+$hovered-project-bg-color: #061940;
+
+$arrow-icon-color: #c0c0c0;
+
+$workspace-name-font-color: white;
+
+#todolist-div {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  #header {
+    flex: 0 1 auto;
+    #app-name-h1 {
+      @include cyber-font(3rem, blue);
+    }
+    background-color: $header-bg-color;
+  }
+
+  #main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row;
+    #projects-nav {
+      background-color: $projects-nav-bg-color;
+      flex: 1 0 auto;
+      min-width: 300px;
+      .product-arrow-icon {
+        color: $arrow-icon-color;
+      }
+      #workspace-name-div {
+        display: flex;
+        align-items: center;
+        background-color: $workspace-name-bg-color;
+        #workspace-name-h2 {
+          color: $workspace-name-font-color;
+        }
+      }
+      .projects-div {
+        .project-button {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          display: flex;
+          padding: 3px 0 3px 24px;
+          background: transparent;
+          border: 1px transparent;
+          .project-name-h4 {
+            text-align: left;
+            font-family: "Inconsolata", monospace;
+            font-size: 1rem;
+            color: $done-project-font-color;
+          }
+        }
+        .project-button:hover {
+          cursor: pointer;
+          background-color: $hovered-project-bg-color;
+        }
+      }
+    }
+    #project-content-div {
+      flex: 3 0 auto;
+      background-color: $main-bg-color;
+    }
+  }
+
+  #footer {
+    flex: 0 0 20px;
+    min-width: 40px;
+    background-color: $footer-bg-color;
+  }
+}
